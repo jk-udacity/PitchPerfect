@@ -32,10 +32,17 @@
                                 <color key="textColor" red="0.17714575120000001" green="0.35287363560000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GxZ-gD-Afd">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="GxZ-gD-Afd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gqy-Bc-ZQY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GxZ-gD-Afd" secondAttribute="bottom" constant="8" id="P53-5d-f8k"/>
                             <constraint firstItem="nmX-ai-IVS" firstAttribute="top" secondItem="LZE-EJ-vka" secondAttribute="bottom" constant="8" id="R7m-0O-Xhz"/>
                             <constraint firstItem="nmX-ai-IVS" firstAttribute="centerX" secondItem="LZE-EJ-vka" secondAttribute="centerX" id="aVr-Qe-lMO"/>
                             <constraint firstItem="LZE-EJ-vka" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vo6-NA-f85"/>
@@ -45,24 +52,30 @@
                             <mask key="subviews">
                                 <exclude reference="LZE-EJ-vka"/>
                                 <exclude reference="nmX-ai-IVS"/>
+                                <exclude reference="GxZ-gD-Afd"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="vo6-NA-f85"/>
                                 <exclude reference="yUf-fk-Pu8"/>
                                 <exclude reference="R7m-0O-Xhz"/>
                                 <exclude reference="aVr-Qe-lMO"/>
+                                <exclude reference="Gqy-Bc-ZQY"/>
+                                <exclude reference="P53-5d-f8k"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="LZE-EJ-vka"/>
                                 <include reference="nmX-ai-IVS"/>
+                                <include reference="GxZ-gD-Afd"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="vo6-NA-f85"/>
                                 <include reference="yUf-fk-Pu8"/>
                                 <include reference="R7m-0O-Xhz"/>
                                 <include reference="aVr-Qe-lMO"/>
+                                <include reference="Gqy-Bc-ZQY"/>
+                                <include reference="P53-5d-f8k"/>
                             </mask>
                         </variation>
                     </view>
