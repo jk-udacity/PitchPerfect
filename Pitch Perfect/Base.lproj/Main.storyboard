@@ -39,6 +39,9 @@
                                 <variation key="widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="175" y="552" width="50" height="50"/>
                                 </variation>
+                                <connections>
+                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0B8-Ec-bW8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>

@@ -26,5 +26,12 @@ class ViewController: UIViewController {
         //TODO: Record the user's voice
         print("in recordAudio")
     }
+    
+    
+    @IBAction func stopRecording(sender: AnyObject) {
+        //TODO: Stop recording user's voice
+        print("in stopRecording")
+        recordingLabel.hidden = true
+    }
 }
 
