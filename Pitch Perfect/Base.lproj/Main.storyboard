@@ -21,21 +21,30 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Record Button"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="151" y="285" width="99" height="30"/>
-                                </variation>
                             </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LZE-EJ-vka" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vo6-NA-f85"/>
+                            <constraint firstItem="LZE-EJ-vka" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yUf-fk-Pu8"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="LZE-EJ-vka"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="vo6-NA-f85"/>
+                                <exclude reference="yUf-fk-Pu8"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="LZE-EJ-vka"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="vo6-NA-f85"/>
+                                <include reference="yUf-fk-Pu8"/>
                             </mask>
                         </variation>
                     </view>
