@@ -25,32 +25,50 @@
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YWU-gu-1We"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmX-ai-IVS">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.17714575120000001" green="0.35287363560000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="nmX-ai-IVS" firstAttribute="top" secondItem="LZE-EJ-vka" secondAttribute="bottom" constant="8" id="R7m-0O-Xhz"/>
+                            <constraint firstItem="nmX-ai-IVS" firstAttribute="centerX" secondItem="LZE-EJ-vka" secondAttribute="centerX" id="aVr-Qe-lMO"/>
                             <constraint firstItem="LZE-EJ-vka" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vo6-NA-f85"/>
                             <constraint firstItem="LZE-EJ-vka" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yUf-fk-Pu8"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="LZE-EJ-vka"/>
+                                <exclude reference="nmX-ai-IVS"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="vo6-NA-f85"/>
                                 <exclude reference="yUf-fk-Pu8"/>
+                                <exclude reference="R7m-0O-Xhz"/>
+                                <exclude reference="aVr-Qe-lMO"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="LZE-EJ-vka"/>
+                                <include reference="nmX-ai-IVS"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="vo6-NA-f85"/>
                                 <include reference="yUf-fk-Pu8"/>
+                                <include reference="R7m-0O-Xhz"/>
+                                <include reference="aVr-Qe-lMO"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="recordingLabel" destination="nmX-ai-IVS" id="pGW-5z-x8I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
