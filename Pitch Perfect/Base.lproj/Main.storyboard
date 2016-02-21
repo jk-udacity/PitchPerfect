@@ -86,7 +86,9 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="microphoneButton" destination="LZE-EJ-vka" id="2t3-oG-SaA"/>
                         <outlet property="recordingLabel" destination="nmX-ai-IVS" id="pGW-5z-x8I"/>
+                        <outlet property="stopButton" destination="GxZ-gD-Afd" id="zNk-fl-4Te"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
