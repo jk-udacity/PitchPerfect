@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AC73D8201C7CF9C30005F778 /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC73D81F1C7CF9C30005F778 /* PlaySoundsViewController.swift */; };
+		AC73D8241C7D0A9E0005F778 /* movie_quote.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AC73D8231C7D0A9E0005F778 /* movie_quote.mp3 */; };
 		ACCEB80A1C78EF8F0033EBAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCEB8091C78EF8F0033EBAC /* AppDelegate.swift */; };
 		ACCEB80C1C78EF8F0033EBAC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCEB80B1C78EF8F0033EBAC /* ViewController.swift */; };
 		ACCEB80F1C78EF8F0033EBAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACCEB80D1C78EF8F0033EBAC /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		AC73D81F1C7CF9C30005F778 /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
+		AC73D8231C7D0A9E0005F778 /* movie_quote.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = movie_quote.mp3; path = ../../../../Downloads/movie_quote.mp3; sourceTree = "<group>"; };
 		ACCEB8061C78EF8F0033EBAC /* Pitch Perfect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pitch Perfect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACCEB8091C78EF8F0033EBAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACCEB80B1C78EF8F0033EBAC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +42,7 @@
 		ACCEB7FD1C78EF8F0033EBAC = {
 			isa = PBXGroup;
 			children = (
+				AC73D8231C7D0A9E0005F778 /* movie_quote.mp3 */,
 				ACCEB8081C78EF8F0033EBAC /* Pitch Perfect */,
 				ACCEB8071C78EF8F0033EBAC /* Products */,
 			);
@@ -128,6 +131,7 @@
 			files = (
 				ACCEB8141C78EF8F0033EBAC /* LaunchScreen.storyboard in Resources */,
 				ACCEB8111C78EF8F0033EBAC /* Assets.xcassets in Resources */,
+				AC73D8241C7D0A9E0005F778 /* movie_quote.mp3 in Resources */,
 				ACCEB80F1C78EF8F0033EBAC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

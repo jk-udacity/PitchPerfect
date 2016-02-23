@@ -7,23 +7,41 @@
 //
 
 import UIKit
+import AVFoundation
 
 class PlaySoundsViewController: UIViewController {
 
+    var audioPlayer : AVAudioPlayer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        if let filePath = NSBundle.mainBundle().pathForResource("movie_quote", ofType: "mp3") {
+            let sound = NSURL(fileURLWithPath: filePath)
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOfURL: sound)
+                audioPlayer.enableRate = true
+            } catch {
+                print("Error while trying to create audio player")
+            }
+        } else {
+            print("Couldn't load sound file")
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     @IBAction func playSlowSound(sender: AnyObject) {
         print("Inside playSlowSound")
+        audioPlayer.stop()
+        audioPlayer.currentTime = 0
+        audioPlayer.rate = 0.5
+        audioPlayer.play()
     }
     /*
     // MARK: - Navigation
