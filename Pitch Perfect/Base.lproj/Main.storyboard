@@ -36,9 +36,6 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
                                 <state key="normal" image="stop"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="175" y="552" width="50" height="50"/>
-                                </variation>
                                 <connections>
                                     <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0B8-Ec-bW8"/>
                                     <segue destination="ByI-Sg-JQc" kind="show" id="T82-Ck-IsX"/>
@@ -62,12 +59,12 @@
                                 <exclude reference="GxZ-gD-Afd"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="P53-5d-f8k"/>
+                                <exclude reference="Gqy-Bc-ZQY"/>
                                 <exclude reference="vo6-NA-f85"/>
                                 <exclude reference="yUf-fk-Pu8"/>
                                 <exclude reference="R7m-0O-Xhz"/>
                                 <exclude reference="aVr-Qe-lMO"/>
-                                <exclude reference="Gqy-Bc-ZQY"/>
-                                <exclude reference="P53-5d-f8k"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -77,12 +74,12 @@
                                 <include reference="GxZ-gD-Afd"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="P53-5d-f8k"/>
+                                <include reference="Gqy-Bc-ZQY"/>
                                 <include reference="vo6-NA-f85"/>
                                 <include reference="yUf-fk-Pu8"/>
                                 <include reference="R7m-0O-Xhz"/>
                                 <include reference="aVr-Qe-lMO"/>
-                                <include reference="Gqy-Bc-ZQY"/>
-                                <include reference="P53-5d-f8k"/>
                             </mask>
                         </variation>
                     </view>
@@ -97,18 +94,42 @@
             </objects>
             <point key="canvasLocation" x="1305" y="291"/>
         </scene>
-        <!--View Controller-->
+        <!--Play Sounds View Controller-->
         <scene sceneID="OBB-M9-7R0">
             <objects>
-                <viewController id="ByI-Sg-JQc" sceneMemberID="viewController">
+                <viewController id="ByI-Sg-JQc" customClass="PlaySoundsViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gpR-9d-E7I"/>
                         <viewControllerLayoutGuide type="bottom" id="sG9-pg-puf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="n8I-1K-0hH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7b-i4-dCf">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Button"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="31" y="87" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="playSlowSound:" destination="ByI-Sg-JQc" eventType="touchUpInside" id="eNq-Af-wbx"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="M7b-i4-dCf"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="M7b-i4-dCf"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pTB-AF-N66" userLabel="First Responder" sceneMemberID="firstResponder"/>
