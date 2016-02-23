@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Record-->
@@ -110,24 +111,65 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
                                 <state key="normal" image="slow"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="72" width="100" height="100"/>
-                                </variation>
                                 <connections>
                                     <action selector="playSlowSound:" destination="ByI-Sg-JQc" eventType="touchUpInside" id="eNq-Af-wbx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tQw-It-s2I">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" image="stop"/>
+                                <connections>
+                                    <action selector="stopPlayback:" destination="ByI-Sg-JQc" eventType="touchUpInside" id="OFc-MK-ZDj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3V-az-92d">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" image="fast"/>
+                                <connections>
+                                    <action selector="playSoundFast:" destination="ByI-Sg-JQc" eventType="touchUpInside" id="M3E-Ja-O26"/>
                                 </connections>
                             </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="B3V-az-92d" firstAttribute="top" secondItem="gpR-9d-E7I" secondAttribute="bottom" constant="50" id="4gS-sI-eKO"/>
+                            <constraint firstItem="sG9-pg-puf" firstAttribute="top" secondItem="tQw-It-s2I" secondAttribute="bottom" constant="30" id="M1o-2j-lEh"/>
+                            <constraint firstItem="tQw-It-s2I" firstAttribute="centerX" secondItem="n8I-1K-0hH" secondAttribute="centerX" id="S6e-EH-F9c"/>
+                            <constraint firstItem="M7b-i4-dCf" firstAttribute="leading" secondItem="n8I-1K-0hH" secondAttribute="leadingMargin" constant="22" id="ZXE-m3-2e1"/>
+                            <constraint firstItem="M7b-i4-dCf" firstAttribute="top" secondItem="gpR-9d-E7I" secondAttribute="bottom" constant="50" id="iWH-3q-EwR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="B3V-az-92d" secondAttribute="trailing" constant="22" id="lCt-VD-Q85"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="M7b-i4-dCf"/>
+                                <exclude reference="tQw-It-s2I"/>
+                                <exclude reference="B3V-az-92d"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="ZXE-m3-2e1"/>
+                                <exclude reference="iWH-3q-EwR"/>
+                                <exclude reference="4gS-sI-eKO"/>
+                                <exclude reference="lCt-VD-Q85"/>
+                                <exclude reference="S6e-EH-F9c"/>
+                                <exclude reference="M1o-2j-lEh"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="M7b-i4-dCf"/>
+                                <include reference="tQw-It-s2I"/>
+                                <include reference="B3V-az-92d"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="ZXE-m3-2e1"/>
+                                <include reference="iWH-3q-EwR"/>
+                                <include reference="4gS-sI-eKO"/>
+                                <include reference="lCt-VD-Q85"/>
+                                <include reference="S6e-EH-F9c"/>
+                                <include reference="M1o-2j-lEh"/>
                             </mask>
                         </variation>
                     </view>
@@ -157,6 +199,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="fast" width="100" height="100"/>
         <image name="microphone" width="100" height="100"/>
         <image name="slow" width="100" height="100"/>
         <image name="stop" width="50" height="50"/>
