@@ -18,17 +18,11 @@ class PlaySoundsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        if let filePath = NSBundle.mainBundle().pathForResource("movie_quote", ofType: "mp3") {
-            let sound = NSURL(fileURLWithPath: filePath)
-            do {
-                audioPlayer = try AVAudioPlayer(contentsOfURL: sound)
-                audioPlayer.enableRate = true
-            } catch {
-                print("Error while trying to create audio player")
-            }
-        } else {
-            print("Couldn't load sound file")
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOfURL: receivedAudio.filePathUrl)
+            audioPlayer.enableRate = true
+        } catch {
+            print("Error while trying to create audio player")
         }
     }
 
@@ -44,6 +38,10 @@ class PlaySoundsViewController: UIViewController {
     
     @IBAction func playSoundFast(sender: AnyObject) {
         playSound(2.0, actionName: "playSoundFast")
+    }
+    
+    @IBAction func playChipmunkSound(sender: AnyObject) {
+        print("inside playChipmunkSound")
     }
     
     func playSound(rate: float_t, actionName: String) {

@@ -132,6 +132,14 @@
                                     <action selector="playSoundFast:" destination="ByI-Sg-JQc" eventType="touchUpInside" id="M3E-Ja-O26"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19U-oe-Zas">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" image="chipmunk"/>
+                                <connections>
+                                    <action selector="playChipmunkSound:" destination="ByI-Sg-JQc" eventType="touchUpInside" id="fCG-AI-hz2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -140,17 +148,22 @@
                             <constraint firstItem="sG9-pg-puf" firstAttribute="top" secondItem="tQw-It-s2I" secondAttribute="bottom" constant="30" id="M1o-2j-lEh"/>
                             <constraint firstItem="tQw-It-s2I" firstAttribute="centerX" secondItem="n8I-1K-0hH" secondAttribute="centerX" id="S6e-EH-F9c"/>
                             <constraint firstItem="M7b-i4-dCf" firstAttribute="leading" secondItem="n8I-1K-0hH" secondAttribute="leadingMargin" constant="22" id="ZXE-m3-2e1"/>
+                            <constraint firstItem="19U-oe-Zas" firstAttribute="leading" secondItem="n8I-1K-0hH" secondAttribute="leadingMargin" constant="22" id="fe5-5Y-dbq"/>
                             <constraint firstItem="M7b-i4-dCf" firstAttribute="top" secondItem="gpR-9d-E7I" secondAttribute="bottom" constant="50" id="iWH-3q-EwR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="B3V-az-92d" secondAttribute="trailing" constant="22" id="lCt-VD-Q85"/>
+                            <constraint firstItem="19U-oe-Zas" firstAttribute="top" secondItem="M7b-i4-dCf" secondAttribute="bottom" constant="50" id="uye-BJ-tvd"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="M7b-i4-dCf"/>
                                 <exclude reference="tQw-It-s2I"/>
                                 <exclude reference="B3V-az-92d"/>
+                                <exclude reference="19U-oe-Zas"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="M1o-2j-lEh"/>
+                                <exclude reference="fe5-5Y-dbq"/>
+                                <exclude reference="uye-BJ-tvd"/>
                                 <exclude reference="4gS-sI-eKO"/>
                                 <exclude reference="lCt-VD-Q85"/>
                                 <exclude reference="ZXE-m3-2e1"/>
@@ -163,9 +176,12 @@
                                 <include reference="M7b-i4-dCf"/>
                                 <include reference="tQw-It-s2I"/>
                                 <include reference="B3V-az-92d"/>
+                                <include reference="19U-oe-Zas"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="M1o-2j-lEh"/>
+                                <include reference="fe5-5Y-dbq"/>
+                                <include reference="uye-BJ-tvd"/>
                                 <include reference="4gS-sI-eKO"/>
                                 <include reference="lCt-VD-Q85"/>
                                 <include reference="ZXE-m3-2e1"/>
@@ -200,6 +216,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chipmunk" width="100" height="100"/>
         <image name="fast" width="100" height="100"/>
         <image name="microphone" width="100" height="100"/>
         <image name="slow" width="100" height="100"/>
