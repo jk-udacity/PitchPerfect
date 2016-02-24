@@ -13,6 +13,8 @@ class PlaySoundsViewController: UIViewController {
 
     var audioPlayer : AVAudioPlayer!
     var receivedAudio : RecordedAudio!
+    var audioEngine : AVAudioEngine!
+    var audioFile : AVAudioFile!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +26,9 @@ class PlaySoundsViewController: UIViewController {
         } catch {
             print("Error while trying to create audio player")
         }
+        
+        audioEngine = AVAudioEngine()
+        try! audioFile = AVAudioFile(forReading: receivedAudio.filePathUrl)
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,15 +45,37 @@ class PlaySoundsViewController: UIViewController {
         playSound(2.0, actionName: "playSoundFast")
     }
     
-    @IBAction func playChipmunkSound(sender: AnyObject) {
-        print("inside playChipmunkSound")
-    }
-    
     func playSound(rate: float_t, actionName: String) {
         print("Inside " + actionName)
         audioPlayer.stop()
         audioPlayer.rate = rate
         audioPlayer.play()
+    }
+    
+    @IBAction func playChipmunkSound(sender: AnyObject) {
+        print("inside playChipmunkSound")
+        
+        playAudioWithPitch(1000)
+    }
+    
+    func playAudioWithPitch(pitch: float_t) {
+        audioPlayer.stop()
+        audioEngine.stop()
+        audioEngine.reset()
+        
+        let audioPlayerNode = AVAudioPlayerNode()
+        audioEngine.attachNode(audioPlayerNode)
+        
+        let changePitchEffect = AVAudioUnitTimePitch()
+        changePitchEffect.pitch = pitch
+        
+        audioEngine.attachNode(changePitchEffect)
+        audioEngine.connect(audioPlayerNode, to: changePitchEffect, format: nil)
+        audioEngine.connect(changePitchEffect, to: audioEngine.outputNode, format: nil)
+        
+        audioPlayerNode.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
+        try! audioEngine.start()
+        audioPlayerNode.play()
     }
     
     
