@@ -140,11 +140,21 @@
                                     <action selector="playChipmunkSound:" destination="ByI-Sg-JQc" eventType="touchUpInside" id="fCG-AI-hz2"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nhw-mR-Mav">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" image="vader"/>
+                                <connections>
+                                    <action selector="playDarthVaderSound:" destination="ByI-Sg-JQc" eventType="touchUpInside" id="GAE-Ey-ksB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="B3V-az-92d" firstAttribute="top" secondItem="gpR-9d-E7I" secondAttribute="bottom" constant="50" id="4gS-sI-eKO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Nhw-mR-Mav" secondAttribute="trailing" constant="22" id="8hh-Ov-PMn"/>
+                            <constraint firstItem="Nhw-mR-Mav" firstAttribute="top" secondItem="B3V-az-92d" secondAttribute="bottom" constant="50" id="8iC-ot-rQ7"/>
                             <constraint firstItem="sG9-pg-puf" firstAttribute="top" secondItem="tQw-It-s2I" secondAttribute="bottom" constant="30" id="M1o-2j-lEh"/>
                             <constraint firstItem="tQw-It-s2I" firstAttribute="centerX" secondItem="n8I-1K-0hH" secondAttribute="centerX" id="S6e-EH-F9c"/>
                             <constraint firstItem="M7b-i4-dCf" firstAttribute="leading" secondItem="n8I-1K-0hH" secondAttribute="leadingMargin" constant="22" id="ZXE-m3-2e1"/>
@@ -159,16 +169,19 @@
                                 <exclude reference="tQw-It-s2I"/>
                                 <exclude reference="B3V-az-92d"/>
                                 <exclude reference="19U-oe-Zas"/>
+                                <exclude reference="Nhw-mR-Mav"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="M1o-2j-lEh"/>
+                                <exclude reference="ZXE-m3-2e1"/>
+                                <exclude reference="iWH-3q-EwR"/>
                                 <exclude reference="fe5-5Y-dbq"/>
                                 <exclude reference="uye-BJ-tvd"/>
                                 <exclude reference="4gS-sI-eKO"/>
                                 <exclude reference="lCt-VD-Q85"/>
-                                <exclude reference="ZXE-m3-2e1"/>
-                                <exclude reference="iWH-3q-EwR"/>
+                                <exclude reference="8hh-Ov-PMn"/>
+                                <exclude reference="8iC-ot-rQ7"/>
                                 <exclude reference="S6e-EH-F9c"/>
+                                <exclude reference="M1o-2j-lEh"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -177,16 +190,19 @@
                                 <include reference="tQw-It-s2I"/>
                                 <include reference="B3V-az-92d"/>
                                 <include reference="19U-oe-Zas"/>
+                                <include reference="Nhw-mR-Mav"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="M1o-2j-lEh"/>
+                                <include reference="ZXE-m3-2e1"/>
+                                <include reference="iWH-3q-EwR"/>
                                 <include reference="fe5-5Y-dbq"/>
                                 <include reference="uye-BJ-tvd"/>
                                 <include reference="4gS-sI-eKO"/>
                                 <include reference="lCt-VD-Q85"/>
-                                <include reference="ZXE-m3-2e1"/>
-                                <include reference="iWH-3q-EwR"/>
+                                <include reference="8hh-Ov-PMn"/>
+                                <include reference="8iC-ot-rQ7"/>
                                 <include reference="S6e-EH-F9c"/>
+                                <include reference="M1o-2j-lEh"/>
                             </mask>
                         </variation>
                     </view>
@@ -221,5 +237,6 @@
         <image name="microphone" width="100" height="100"/>
         <image name="slow" width="100" height="100"/>
         <image name="stop" width="50" height="50"/>
+        <image name="vader" width="100" height="100"/>
     </resources>
 </document>
