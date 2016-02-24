@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  RecordSoundViewController.swift
 //  Pitch Perfect
 //
 //  Created by Mirko Jurić-Kavelj on 2/20/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class RecordSoundViewController: UIViewController {
     @IBOutlet weak var recordingLabel: UILabel!
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var microphoneButton: UIButton!
