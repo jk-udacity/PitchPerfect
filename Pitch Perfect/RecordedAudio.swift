@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  RecordedAudio.swift
 //  Pitch Perfect
 //
 //  Created by Mirko Jurić-Kavelj on 2/24/16.
