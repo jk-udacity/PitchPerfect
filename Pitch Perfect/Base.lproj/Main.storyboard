@@ -10,7 +10,7 @@
         <!--Record-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="RecordSoundViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RecordSoundsViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -172,16 +172,16 @@
                                 <exclude reference="Nhw-mR-Mav"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="ZXE-m3-2e1"/>
-                                <exclude reference="iWH-3q-EwR"/>
+                                <exclude reference="M1o-2j-lEh"/>
                                 <exclude reference="fe5-5Y-dbq"/>
                                 <exclude reference="uye-BJ-tvd"/>
                                 <exclude reference="4gS-sI-eKO"/>
                                 <exclude reference="lCt-VD-Q85"/>
+                                <exclude reference="ZXE-m3-2e1"/>
+                                <exclude reference="iWH-3q-EwR"/>
                                 <exclude reference="8hh-Ov-PMn"/>
                                 <exclude reference="8iC-ot-rQ7"/>
                                 <exclude reference="S6e-EH-F9c"/>
-                                <exclude reference="M1o-2j-lEh"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -193,16 +193,16 @@
                                 <include reference="Nhw-mR-Mav"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="ZXE-m3-2e1"/>
-                                <include reference="iWH-3q-EwR"/>
+                                <include reference="M1o-2j-lEh"/>
                                 <include reference="fe5-5Y-dbq"/>
                                 <include reference="uye-BJ-tvd"/>
                                 <include reference="4gS-sI-eKO"/>
                                 <include reference="lCt-VD-Q85"/>
+                                <include reference="ZXE-m3-2e1"/>
+                                <include reference="iWH-3q-EwR"/>
                                 <include reference="8hh-Ov-PMn"/>
                                 <include reference="8iC-ot-rQ7"/>
                                 <include reference="S6e-EH-F9c"/>
-                                <include reference="M1o-2j-lEh"/>
                             </mask>
                         </variation>
                     </view>
