@@ -47,9 +47,17 @@ class PlaySoundsViewController: UIViewController {
     
     func playSound(rate: float_t, actionName: String) {
         print("Inside " + actionName)
-        audioPlayer.stop()
+        stopAndReset()
+        
         audioPlayer.rate = rate
         audioPlayer.play()
+    }
+    
+    func stopAndReset() {
+        audioPlayer.stop()
+        audioPlayer.currentTime = 0
+        audioEngine.stop()
+        audioEngine.reset()
     }
     
     @IBAction func playChipmunkSound(sender: AnyObject) {
@@ -65,9 +73,7 @@ class PlaySoundsViewController: UIViewController {
     }
     
     func playAudioWithPitch(pitch: float_t) {
-        audioPlayer.stop()
-        audioEngine.stop()
-        audioEngine.reset()
+        stopAndReset()
         
         let audioPlayerNode = AVAudioPlayerNode()
         audioEngine.attachNode(audioPlayerNode)
@@ -86,8 +92,7 @@ class PlaySoundsViewController: UIViewController {
     
     
     @IBAction func stopPlayback(sender: AnyObject) {
-        audioPlayer.stop()
-        audioPlayer.currentTime = 0
+        stopAndReset()
     }
     /*
     // MARK: - Navigation
