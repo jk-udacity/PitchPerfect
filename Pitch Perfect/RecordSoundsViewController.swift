@@ -14,6 +14,12 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var microphoneButton: UIButton!
+    @IBOutlet weak var pauseRecordingButton: UIButton!
+    @IBOutlet weak var resumeRecordingButton: UIButton!
+    
+    let recordingText = "Recording..."
+    let tapToRecordText = "Tap to Record"
+    let resumeRecordingText = "Press Resume to continue recording"
     
     //Declared Globally
     var audioRecorder:AVAudioRecorder!
@@ -34,13 +40,16 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
         stopButton.hidden = true
         infoLabel.hidden = false
-        infoLabel.text = "Tap to Record"
+        infoLabel.text = tapToRecordText
+        pauseRecordingButton.hidden = true
+        resumeRecordingButton.hidden = true
     }
 
     @IBAction func recordAudio(sender: UIButton) {
         infoLabel.hidden = false
-        infoLabel.text = "Recording..."
+        infoLabel.text = recordingText
         stopButton.hidden = false
+        pauseRecordingButton.hidden = false
         microphoneButton.enabled = false
         print("in recordAudio")
         
@@ -61,6 +70,26 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         audioRecorder.record()
     }
     
+    
+    @IBAction func pauseRecording(sender: AnyObject) {
+        print("in pauseRecording")
+        infoLabel.hidden = false
+        infoLabel.text = resumeRecordingText
+        pauseRecordingButton.hidden = true
+        resumeRecordingButton.hidden = false
+        
+        audioRecorder.pause()
+    }
+    
+    @IBAction func resumeRecording(sender: AnyObject) {
+        print("in resumeRecording")
+        infoLabel.hidden = false
+        infoLabel.text = recordingText
+        resumeRecordingButton.hidden = true
+        pauseRecordingButton.hidden = false
+        
+        audioRecorder.record()
+    }
     
     @IBAction func stopRecording(sender: AnyObject) {
         print("in stopRecording")

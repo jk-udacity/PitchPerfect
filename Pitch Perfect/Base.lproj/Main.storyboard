@@ -42,6 +42,28 @@
                                 <color key="textColor" red="0.17714575120000001" green="0.35287363560000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vA7-uc-gDo">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" image="pause"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="104" y="427" width="80" height="80"/>
+                                </variation>
+                                <connections>
+                                    <action selector="pauseRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mDf-3G-ojX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56l-wn-rNI">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" image="resume"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="199" y="427" width="80" height="80"/>
+                                </variation>
+                                <connections>
+                                    <action selector="resumeRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f9c-lA-y7y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.23527296584621793" green="0.49057745989310436" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
@@ -49,8 +71,13 @@
                             <constraint firstItem="GxZ-gD-Afd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gqy-Bc-ZQY"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GxZ-gD-Afd" secondAttribute="bottom" constant="8" id="P53-5d-f8k"/>
                             <constraint firstItem="nmX-ai-IVS" firstAttribute="top" secondItem="LZE-EJ-vka" secondAttribute="bottom" constant="8" id="R7m-0O-Xhz"/>
+                            <constraint firstItem="vA7-uc-gDo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VY2-CQ-wAG"/>
                             <constraint firstItem="nmX-ai-IVS" firstAttribute="centerX" secondItem="LZE-EJ-vka" secondAttribute="centerX" id="aVr-Qe-lMO"/>
+                            <constraint firstItem="56l-wn-rNI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f0I-9c-ZIf"/>
+                            <constraint firstItem="GxZ-gD-Afd" firstAttribute="top" secondItem="vA7-uc-gDo" secondAttribute="bottom" constant="35" id="uxQ-z2-pIc"/>
                             <constraint firstItem="LZE-EJ-vka" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vo6-NA-f85"/>
+                            <constraint firstItem="GxZ-gD-Afd" firstAttribute="top" secondItem="56l-wn-rNI" secondAttribute="bottom" constant="35" id="wIO-T2-Edf"/>
+                            <constraint firstItem="56l-wn-rNI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xCP-uZ-E0U"/>
                             <constraint firstItem="LZE-EJ-vka" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yUf-fk-Pu8"/>
                         </constraints>
                         <variation key="default">
@@ -58,14 +85,21 @@
                                 <exclude reference="LZE-EJ-vka"/>
                                 <exclude reference="GxZ-gD-Afd"/>
                                 <exclude reference="nmX-ai-IVS"/>
+                                <exclude reference="vA7-uc-gDo"/>
+                                <exclude reference="56l-wn-rNI"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="P53-5d-f8k"/>
-                                <exclude reference="Gqy-Bc-ZQY"/>
                                 <exclude reference="vo6-NA-f85"/>
                                 <exclude reference="yUf-fk-Pu8"/>
                                 <exclude reference="R7m-0O-Xhz"/>
                                 <exclude reference="aVr-Qe-lMO"/>
+                                <exclude reference="VY2-CQ-wAG"/>
+                                <exclude reference="f0I-9c-ZIf"/>
+                                <exclude reference="xCP-uZ-E0U"/>
+                                <exclude reference="Gqy-Bc-ZQY"/>
+                                <exclude reference="uxQ-z2-pIc"/>
+                                <exclude reference="wIO-T2-Edf"/>
+                                <exclude reference="P53-5d-f8k"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -73,14 +107,21 @@
                                 <include reference="LZE-EJ-vka"/>
                                 <include reference="GxZ-gD-Afd"/>
                                 <include reference="nmX-ai-IVS"/>
+                                <include reference="vA7-uc-gDo"/>
+                                <include reference="56l-wn-rNI"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="P53-5d-f8k"/>
-                                <include reference="Gqy-Bc-ZQY"/>
                                 <include reference="vo6-NA-f85"/>
                                 <include reference="yUf-fk-Pu8"/>
                                 <include reference="R7m-0O-Xhz"/>
                                 <include reference="aVr-Qe-lMO"/>
+                                <include reference="VY2-CQ-wAG"/>
+                                <include reference="f0I-9c-ZIf"/>
+                                <include reference="xCP-uZ-E0U"/>
+                                <include reference="Gqy-Bc-ZQY"/>
+                                <include reference="uxQ-z2-pIc"/>
+                                <include reference="wIO-T2-Edf"/>
+                                <include reference="P53-5d-f8k"/>
                             </mask>
                         </variation>
                     </view>
@@ -88,6 +129,8 @@
                     <connections>
                         <outlet property="infoLabel" destination="nmX-ai-IVS" id="CAu-Zo-Jv3"/>
                         <outlet property="microphoneButton" destination="LZE-EJ-vka" id="2t3-oG-SaA"/>
+                        <outlet property="pauseRecordingButton" destination="vA7-uc-gDo" id="n3N-0J-pyn"/>
+                        <outlet property="resumeRecordingButton" destination="56l-wn-rNI" id="IfT-vT-c5n"/>
                         <outlet property="stopButton" destination="GxZ-gD-Afd" id="zNk-fl-4Te"/>
                         <segue destination="ByI-Sg-JQc" kind="show" identifier="stopRecording" id="ETV-FJ-7md"/>
                     </connections>
@@ -257,6 +300,8 @@
         <image name="echo" width="80" height="80"/>
         <image name="fast" width="100" height="100"/>
         <image name="microphone" width="100" height="100"/>
+        <image name="pause" width="80" height="80"/>
+        <image name="resume" width="80" height="80"/>
         <image name="slow" width="100" height="100"/>
         <image name="stop" width="50" height="50"/>
         <image name="vader" width="100" height="100"/>
