@@ -12,6 +12,7 @@ import AVFoundation
 class PlaySoundsViewController: UIViewController {
 
     var audioPlayer : AVAudioPlayer!
+    var echoPlayer : RepetableAudioPlayer!
     var receivedAudio : RecordedAudio!
     var audioEngine : AVAudioEngine!
     var audioFile : AVAudioFile!
@@ -23,6 +24,7 @@ class PlaySoundsViewController: UIViewController {
         do {
             audioPlayer = try AVAudioPlayer(contentsOfURL: receivedAudio.filePathUrl)
             audioPlayer.enableRate = true
+            echoPlayer = RepetableAudioPlayer(contentUrl: receivedAudio.filePathUrl, numberOfPlayers: 3, baselineDelay: 1)
         } catch {
             print("Error while trying to create audio player")
         }
@@ -39,7 +41,6 @@ class PlaySoundsViewController: UIViewController {
     @IBAction func playSlowSound(sender: AnyObject) {
         playSound(0.5, actionName: "playSlowSound")
     }
-    
     
     @IBAction func playSoundFast(sender: AnyObject) {
         playSound(2.0, actionName: "playSoundFast")
@@ -90,6 +91,12 @@ class PlaySoundsViewController: UIViewController {
         audioPlayerNode.play()
     }
     
+    @IBAction func playEchoSound(sender: AnyObject) {
+        print("inside playEchoSound")
+        stopAndReset()
+        
+        echoPlayer.playReverb(audioPlayer.deviceCurrentTime)
+    }
     
     @IBAction func stopPlayback(sender: AnyObject) {
         stopAndReset()

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AC41008F1C7E45CF00460717 /* RecordedAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC41008E1C7E45CF00460717 /* RecordedAudio.swift */; };
+		AC6647F41C8B26D200D72A79 /* RepetableAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6647F31C8B26D200D72A79 /* RepetableAudioPlayer.swift */; };
 		AC73D8201C7CF9C30005F778 /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC73D81F1C7CF9C30005F778 /* PlaySoundsViewController.swift */; };
 		ACCEB80A1C78EF8F0033EBAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCEB8091C78EF8F0033EBAC /* AppDelegate.swift */; };
 		ACCEB80C1C78EF8F0033EBAC /* RecordSoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCEB80B1C78EF8F0033EBAC /* RecordSoundsViewController.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		AC41008E1C7E45CF00460717 /* RecordedAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordedAudio.swift; sourceTree = "<group>"; };
+		AC6647F31C8B26D200D72A79 /* RepetableAudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepetableAudioPlayer.swift; sourceTree = "<group>"; };
 		AC73D81F1C7CF9C30005F778 /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
 		ACCEB8061C78EF8F0033EBAC /* Pitch Perfect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pitch Perfect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACCEB8091C78EF8F0033EBAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				AC73D81F1C7CF9C30005F778 /* PlaySoundsViewController.swift */,
 				ACCEB8121C78EF8F0033EBAC /* LaunchScreen.storyboard */,
 				ACCEB8151C78EF8F0033EBAC /* Info.plist */,
+				AC6647F31C8B26D200D72A79 /* RepetableAudioPlayer.swift */,
 			);
 			path = "Pitch Perfect";
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC6647F41C8B26D200D72A79 /* RepetableAudioPlayer.swift in Sources */,
 				ACCEB80C1C78EF8F0033EBAC /* RecordSoundsViewController.swift in Sources */,
 				AC41008F1C7E45CF00460717 /* RecordedAudio.swift in Sources */,
 				AC73D8201C7CF9C30005F778 /* PlaySoundsViewController.swift in Sources */,
