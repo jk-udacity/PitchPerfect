@@ -39,7 +39,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         recordingLabel.hidden = false
         stopButton.hidden = false
         microphoneButton.enabled = false
-        //TODO: Record the user's voice
         print("in recordAudio")
         
         let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
@@ -61,7 +60,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     
     @IBAction func stopRecording(sender: AnyObject) {
-        //TODO: Stop recording user's voice
         print("in stopRecording")
         recordingLabel.hidden = true
         microphoneButton.enabled = true
