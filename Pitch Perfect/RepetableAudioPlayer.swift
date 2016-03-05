@@ -12,21 +12,20 @@ import AVFoundation
 class RepetableAudioPlayer: NSObject {
     
     var baselineDelay : NSTimeInterval
-    var numberOfReverbPlayers : Int
-    var reverbPlayers : [AVAudioPlayer] = []
+    var numberOfPlayers : Int
+    var players : [AVAudioPlayer] = []
     
     init(contentUrl : NSURL, numberOfPlayers : Int, baselineDelay : NSTimeInterval) {
-        self.numberOfReverbPlayers = numberOfPlayers
+        self.numberOfPlayers = numberOfPlayers
         self.baselineDelay = baselineDelay
         
-        for i in 0...numberOfReverbPlayers {
+        for i in 0...numberOfPlayers {
             do {
                 let player = try AVAudioPlayer(contentsOfURL: contentUrl)
-                let exponent:Double = -Double(i)/Double(numberOfReverbPlayers/2)
+                let exponent:Double = -Double(i) / Double(numberOfPlayers/2)
                 let volume = Float(pow(Double(M_E), exponent))
-                print("Volume \(volume)") // TODO delete
                 player.volume = volume
-                reverbPlayers.append(player)
+                players.append(player)
             } catch {
                 print("Error creating \(i)th player")
             }
@@ -34,10 +33,23 @@ class RepetableAudioPlayer: NSObject {
         print("Done creating reverb players.")
     }
     
-    func playReverb(deviceCurrentTime : NSTimeInterval) {
-        for (i, player) in reverbPlayers.enumerate() {
+    func play(deviceCurrentTime : NSTimeInterval) {
+        for (i, player) in players.enumerate() {
             let delay : NSTimeInterval = baselineDelay * NSTimeInterval(i)
             player.playAtTime(deviceCurrentTime + delay)
+        }
+    }
+    
+    func stop() {
+        for player in players {
+            player.stop()
+        }
+    }
+    
+    func stopAndReset() {
+        for player in players {
+            player.stop()
+            player.currentTime = 0
         }
     }
 }

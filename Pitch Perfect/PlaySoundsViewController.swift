@@ -59,6 +59,7 @@ class PlaySoundsViewController: UIViewController {
         audioPlayer.currentTime = 0
         audioEngine.stop()
         audioEngine.reset()
+        echoPlayer.stopAndReset()
     }
     
     @IBAction func playChipmunkSound(sender: AnyObject) {
@@ -95,7 +96,7 @@ class PlaySoundsViewController: UIViewController {
         print("inside playEchoSound")
         stopAndReset()
         
-        echoPlayer.playReverb(audioPlayer.deviceCurrentTime)
+        echoPlayer.play(audioPlayer.deviceCurrentTime)
     }
     
     @IBAction func stopPlayback(sender: AnyObject) {
