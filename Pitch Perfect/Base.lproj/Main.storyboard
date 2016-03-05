@@ -27,13 +27,6 @@
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YWU-gu-1We"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmX-ai-IVS">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.17714575120000001" green="0.35287363560000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GxZ-gD-Afd">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
@@ -42,6 +35,13 @@
                                     <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0B8-Ec-bW8"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmX-ai-IVS">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.17714575120000001" green="0.35287363560000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.23527296584621793" green="0.49057745989310436" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
@@ -56,8 +56,8 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="LZE-EJ-vka"/>
-                                <exclude reference="nmX-ai-IVS"/>
                                 <exclude reference="GxZ-gD-Afd"/>
+                                <exclude reference="nmX-ai-IVS"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="P53-5d-f8k"/>
@@ -71,8 +71,8 @@
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="LZE-EJ-vka"/>
-                                <include reference="nmX-ai-IVS"/>
                                 <include reference="GxZ-gD-Afd"/>
+                                <include reference="nmX-ai-IVS"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="P53-5d-f8k"/>
@@ -86,8 +86,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Record" id="dvt-Za-BO4"/>
                     <connections>
+                        <outlet property="infoLabel" destination="nmX-ai-IVS" id="CAu-Zo-Jv3"/>
                         <outlet property="microphoneButton" destination="LZE-EJ-vka" id="2t3-oG-SaA"/>
-                        <outlet property="recordingLabel" destination="nmX-ai-IVS" id="pGW-5z-x8I"/>
                         <outlet property="stopButton" destination="GxZ-gD-Afd" id="zNk-fl-4Te"/>
                         <segue destination="ByI-Sg-JQc" kind="show" identifier="stopRecording" id="ETV-FJ-7md"/>
                     </connections>
