@@ -46,9 +46,6 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
                                 <state key="normal" image="pause"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="104" y="427" width="80" height="80"/>
-                                </variation>
                                 <connections>
                                     <action selector="pauseRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mDf-3G-ojX"/>
                                 </connections>
@@ -57,9 +54,6 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
                                 <state key="normal" image="resume"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="199" y="427" width="80" height="80"/>
-                                </variation>
                                 <connections>
                                     <action selector="resumeRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f9c-lA-y7y"/>
                                 </connections>
@@ -89,17 +83,17 @@
                                 <exclude reference="56l-wn-rNI"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="vo6-NA-f85"/>
-                                <exclude reference="yUf-fk-Pu8"/>
-                                <exclude reference="R7m-0O-Xhz"/>
-                                <exclude reference="aVr-Qe-lMO"/>
-                                <exclude reference="VY2-CQ-wAG"/>
+                                <exclude reference="P53-5d-f8k"/>
                                 <exclude reference="f0I-9c-ZIf"/>
                                 <exclude reference="xCP-uZ-E0U"/>
                                 <exclude reference="Gqy-Bc-ZQY"/>
                                 <exclude reference="uxQ-z2-pIc"/>
                                 <exclude reference="wIO-T2-Edf"/>
-                                <exclude reference="P53-5d-f8k"/>
+                                <exclude reference="vo6-NA-f85"/>
+                                <exclude reference="yUf-fk-Pu8"/>
+                                <exclude reference="VY2-CQ-wAG"/>
+                                <exclude reference="R7m-0O-Xhz"/>
+                                <exclude reference="aVr-Qe-lMO"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -111,17 +105,17 @@
                                 <include reference="56l-wn-rNI"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="vo6-NA-f85"/>
-                                <include reference="yUf-fk-Pu8"/>
-                                <include reference="R7m-0O-Xhz"/>
-                                <include reference="aVr-Qe-lMO"/>
-                                <include reference="VY2-CQ-wAG"/>
+                                <include reference="P53-5d-f8k"/>
                                 <include reference="f0I-9c-ZIf"/>
                                 <include reference="xCP-uZ-E0U"/>
                                 <include reference="Gqy-Bc-ZQY"/>
                                 <include reference="uxQ-z2-pIc"/>
                                 <include reference="wIO-T2-Edf"/>
-                                <include reference="P53-5d-f8k"/>
+                                <include reference="vo6-NA-f85"/>
+                                <include reference="yUf-fk-Pu8"/>
+                                <include reference="VY2-CQ-wAG"/>
+                                <include reference="R7m-0O-Xhz"/>
+                                <include reference="aVr-Qe-lMO"/>
                             </mask>
                         </variation>
                     </view>
@@ -195,9 +189,6 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
                                 <state key="normal" image="echo"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="160" y="366" width="80" height="80"/>
-                                </variation>
                                 <connections>
                                     <action selector="playEchoSound:" destination="ByI-Sg-JQc" eventType="touchUpInside" id="Ldb-Eq-14d"/>
                                 </connections>
@@ -231,18 +222,18 @@
                                 <exclude reference="ryd-xY-SD8"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="ZXE-m3-2e1"/>
-                                <exclude reference="iWH-3q-EwR"/>
+                                <exclude reference="M1o-2j-lEh"/>
                                 <exclude reference="fe5-5Y-dbq"/>
                                 <exclude reference="uye-BJ-tvd"/>
                                 <exclude reference="4gS-sI-eKO"/>
                                 <exclude reference="lCt-VD-Q85"/>
+                                <exclude reference="ZXE-m3-2e1"/>
+                                <exclude reference="iWH-3q-EwR"/>
                                 <exclude reference="8hh-Ov-PMn"/>
                                 <exclude reference="8iC-ot-rQ7"/>
                                 <exclude reference="rsr-Xy-ek5"/>
                                 <exclude reference="vzM-Zz-1dd"/>
                                 <exclude reference="S6e-EH-F9c"/>
-                                <exclude reference="M1o-2j-lEh"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -255,18 +246,18 @@
                                 <include reference="ryd-xY-SD8"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="ZXE-m3-2e1"/>
-                                <include reference="iWH-3q-EwR"/>
+                                <include reference="M1o-2j-lEh"/>
                                 <include reference="fe5-5Y-dbq"/>
                                 <include reference="uye-BJ-tvd"/>
                                 <include reference="4gS-sI-eKO"/>
                                 <include reference="lCt-VD-Q85"/>
+                                <include reference="ZXE-m3-2e1"/>
+                                <include reference="iWH-3q-EwR"/>
                                 <include reference="8hh-Ov-PMn"/>
                                 <include reference="8iC-ot-rQ7"/>
                                 <include reference="rsr-Xy-ek5"/>
                                 <include reference="vzM-Zz-1dd"/>
                                 <include reference="S6e-EH-F9c"/>
-                                <include reference="M1o-2j-lEh"/>
                             </mask>
                         </variation>
                     </view>

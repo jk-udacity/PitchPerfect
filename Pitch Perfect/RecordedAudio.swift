@@ -8,8 +8,16 @@
 
 import Foundation
 
-class RecordedAudio: NSObject{
+//
+// This class is used as the Model of the app. It stores necessary information
+// about our recording.
+//
+final class RecordedAudio: NSObject{
+    
+    // Path URL to the file of the recording.
     var filePathUrl: NSURL!
+    
+    // Title of the recording
     var title: String!
     
     init(filePathUrl : NSURL, title: String) {

@@ -9,10 +9,10 @@
 import UIKit
 import AVFoundation
 
-class PlaySoundsViewController: UIViewController {
+final class PlaySoundsViewController: UIViewController {
 
     var audioPlayer : AVAudioPlayer!
-    var echoPlayer : RepetableAudioPlayer!
+    var echoPlayer : TimeDelayedAudioPlayers?
     var receivedAudio : RecordedAudio!
     var audioEngine : AVAudioEngine!
     var audioFile : AVAudioFile!
@@ -24,7 +24,7 @@ class PlaySoundsViewController: UIViewController {
         do {
             audioPlayer = try AVAudioPlayer(contentsOfURL: receivedAudio.filePathUrl)
             audioPlayer.enableRate = true
-            echoPlayer = RepetableAudioPlayer(contentUrl: receivedAudio.filePathUrl, numberOfPlayers: 3, baselineDelay: 1)
+            echoPlayer = TimeDelayedAudioPlayers(contentUrl: receivedAudio.filePathUrl, numberOfPlayers: 3, baselineDelay: 1)
         } catch {
             print("Error while trying to create audio player")
         }
@@ -54,12 +54,13 @@ class PlaySoundsViewController: UIViewController {
         audioPlayer.play()
     }
     
+    // Stops all sounds from playing and resets them to beginning.
     func stopAndReset() {
         audioPlayer.stop()
         audioPlayer.currentTime = 0
         audioEngine.stop()
         audioEngine.reset()
-        echoPlayer.stopAndReset()
+        echoPlayer?.stopAndReset()
     }
     
     @IBAction func playChipmunkSound(sender: AnyObject) {
@@ -96,7 +97,7 @@ class PlaySoundsViewController: UIViewController {
         print("inside playEchoSound")
         stopAndReset()
         
-        echoPlayer.play(audioPlayer.deviceCurrentTime)
+        echoPlayer?.play()
     }
     
     @IBAction func stopPlayback(sender: AnyObject) {

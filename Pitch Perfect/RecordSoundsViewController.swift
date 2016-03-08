@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
+final class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var stopButton: UIButton!
@@ -17,11 +17,12 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     @IBOutlet weak var pauseRecordingButton: UIButton!
     @IBOutlet weak var resumeRecordingButton: UIButton!
     
+    // Text constants used to display information to the user
     let recordingText = "Recording..."
     let tapToRecordText = "Tap to Record"
     let resumeRecordingText = "Press Resume to continue recording"
     
-    //Declared Globally
+    // Declared Globally
     var audioRecorder:AVAudioRecorder!
     var recordedAudio:RecordedAudio!
 
@@ -46,12 +47,13 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
 
     @IBAction func recordAudio(sender: UIButton) {
+        print("in recordAudio")
+        
+        stopButton.hidden = false
         infoLabel.hidden = false
         infoLabel.text = recordingText
-        stopButton.hidden = false
         pauseRecordingButton.hidden = false
         microphoneButton.enabled = false
-        print("in recordAudio")
         
         let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
         
@@ -75,6 +77,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         print("in pauseRecording")
         infoLabel.hidden = false
         infoLabel.text = resumeRecordingText
+        
         pauseRecordingButton.hidden = true
         resumeRecordingButton.hidden = false
         
@@ -85,6 +88,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         print("in resumeRecording")
         infoLabel.hidden = false
         infoLabel.text = recordingText
+        
         resumeRecordingButton.hidden = true
         pauseRecordingButton.hidden = false
         
